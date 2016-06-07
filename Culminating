@@ -1,0 +1,68 @@
+//K. Olasimbo   
+//6/3/2016
+//The purpose of this program is to covert DNA to RNA to Protenes.
+// The "Bioinformatics" class.
+
+import java.awt.*;
+import java.io.*;
+import java.util.*;
+
+public class Bioinformatics
+{
+
+
+    public static void main (String[] args)
+    {
+
+
+
+        //Variable declaration
+     
+        
+      System.out.println ("Please enter a DNA Sequence");
+      Scanner kbReader = new Scanner(System.in);
+      Scanner dnaReaderScanner = new Scanner(System.in);
+      String dnaReader = dnaReaderScanner.nextLine ();
+      int length = dnaReader.length ();
+      
+        //Welcome
+        System.out.println ("**********************************************");
+        System.out.println ("Welcome to K. Olasimbo's DNA transformer!");
+        System.out.println ("**********************************************");
+
+        // Input
+       String aminoacids = dnaReader;
+       int i =0;
+       
+       while (i <= dnaReader.length () -3)
+       {
+           String codon = dnaReader.substring (i, i+=3);
+           System.out.println("Next codon: " + codon);
+           
+          
+           
+ 
+           
+           
+            
+           
+           
+           
+           
+         
+           
+        }
+        //Processing
+        
+
+        //Output
+        
+        
+        //Goodbye
+        System.out.println ("*******************************************************");
+        System.out.println ("Thank you for using K. Olasimbo's DNA Transformer!");
+        System.out.println ("*******************************************************");
+
+
+    } // main method
+} // Temperatures class
