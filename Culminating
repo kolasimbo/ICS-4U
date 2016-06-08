@@ -18,12 +18,33 @@ public class Bioinformatics
 
         //Variable declaration
      
-        
+        //DECLARING ALL MY SCANNERS
       System.out.println ("Please enter a DNA Sequence");
       Scanner kbReader = new Scanner(System.in);
       Scanner dnaReaderScanner = new Scanner(System.in);
       String dnaReader = dnaReaderScanner.nextLine ();
       int length = dnaReader.length ();
+      System.out.println("Would you like to move the string over by 1 [y or n]?");
+        Scanner reader = new Scanner(System.in);
+        char userInput = reader.next().charAt(0);
+        //GIVES THE USER THE OPTION OF MOVING OVER ONE OR TWO
+        if (userInput=='y'){
+             dnaReader = dnaReader.substring(1, dnaReader.length());
+        }
+        else{
+            dnaReader = dnaReader;
+          }
+        
+        System.out.println("Would you like to move the string over by 2 [y or n]?");
+        char userInput1 = reader.next().charAt(0);
+        if (userInput1=='y'){
+             dnaReader = dnaReader.substring(2, dnaReader.length());
+        }
+        else{
+            dnaReader = dnaReader;
+          }
+        
+        System.out.println(dnaReader);
       
         //Welcome
         System.out.println ("**********************************************");
@@ -31,38 +52,47 @@ public class Bioinformatics
         System.out.println ("**********************************************");
 
         // Input
-       String aminoacids = dnaReader;
+       String aminoAcids = dnaReader;
        int i =0;
-       
+       char protein;
+       //SEPERATES ALL THE CODONS INTO THREES
        while (i <= dnaReader.length () -3)
        {
-           String codon = dnaReader.substring (i, i+=3);
-           System.out.println("Next codon: " + codon);
+           String DNA = dnaReader.substring (i, i+=3);
+           System.out.println("Next DNA: " + DNA);
            
-          
-           
- 
-           
-           
+            if(DNA== "STOP"){
+                
+                System.out.println("STOP");
+                
+                System.exit(1);
+            }
             
-           
-           
-           
-           
-         
+
+
            
         }
-        //Processing
+     //class dnatoproteneusingreplace{
+        // int i = 0;
+       //  String aminoAcids = "";
+         //aminoacids = dna.replaceAll ("TTC" , "F");
+         //aminoAcids= aminoAcids.replaceAll ("TCC","S");
+        }
+       
+   }
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
         
 
-        //Output
-        
-        
-        //Goodbye
-        System.out.println ("*******************************************************");
-        System.out.println ("Thank you for using K. Olasimbo's DNA Transformer!");
-        System.out.println ("*******************************************************");
 
-
-    } // main method
-} // Temperatures class
+           
+ 
+ 
